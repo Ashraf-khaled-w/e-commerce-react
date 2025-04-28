@@ -41,11 +41,8 @@ function Navbar() {
           </ul>
         </div>
         <div className="auth flex justify-center items-center content-baseline space-x-3">
-          <div className="auth border p-2 rounded-full hover:shadow-md">
-            <NavLink
-              to={"/auth"}
-              className={`px-2 text-gray-700 hover:text-blue-600 ${transitionClasses}`}
-            >
+          <div className={`auth border p-2 rounded-full hover:scale-[1.1] hover:shadow-md ${transitionClasses}`}>
+            <NavLink to={"/auth"} className={`px-2 text-gray-700 `}>
               Login<span className="px-1">|</span>Signup
             </NavLink>
           </div>
