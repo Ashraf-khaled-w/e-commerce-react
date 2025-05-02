@@ -74,7 +74,7 @@ function Auth() {
   return (
     <>
       <div className="min-h-screen w-screen flex justify-center items-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-amber-50 p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-[90%] max-w-4xl min-h-[1100px] md:min-h-[500px] relative shadow-xl rounded-2xl bg-white overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-[90%] max-w-4xl min-h-[1700px] md:min-h-[500px] relative shadow-xl rounded-2xl bg-white overflow-hidden">
           <div id="login" className={loginContainerClasses}>
             <Login />
           </div>
