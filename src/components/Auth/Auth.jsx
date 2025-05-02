@@ -31,7 +31,7 @@ function Auth() {
     }, 100);
   };
 
-  const signupContainerClasses = `
+  const loginContainerClasses = `
     flex justify-center items-center p-4 rounded-2xl
     ${baseTransition}
     ${
@@ -41,7 +41,7 @@ function Auth() {
     }
   `;
 
-  const loginContainerClasses = `
+  const signupContainerClasses = `
     flex justify-center items-center p-4 rounded-2xl
     ${baseTransition}
     ${
@@ -59,11 +59,11 @@ function Auth() {
 
     // Small Screens (Default): Vertical Slide
     w-full h-[50%] left-0
-    ${isLoginActive ? "top-[0%]" : "top-[50%]"}
+    ${isLoginActive ? "top-[50%]" : "top-[0%]"}
 
     // Medium Screens and Up (md:): Horizontal Slide
     md:w-[50%] md:h-full md:top-0
-    ${isLoginActive ? "md:left-[0%]" : "md:left-[50%]"}
+    ${isLoginActive ? "md:left-[50%]" : "md:left-[0%]"}
   `;
 
   const overlayContentClasses = `
@@ -84,10 +84,10 @@ function Auth() {
           <div id="slideBoxH" className={overlayClasses}>
             <div className="h-full w-full flex flex-col justify-center items-center p-8 text-center">
               <h2 className={`text-2xl font-bold text-white mb-4 ${overlayContentClasses}`}>
-                {!isLoginActive ? "New Here?" : "Already have account?"}
+                {isLoginActive ? "New Here?" : "Already have account?"}
               </h2>
               <p className={`text-white mb-6 ${overlayContentClasses}`}>
-                {!isLoginActive ? "Sign up to get started." : "Login to access your account."}
+                {isLoginActive ? "Sign up to get started." : "Login to access your account."}
               </p>
               <button
                 id="toggleBtn"
@@ -99,7 +99,7 @@ function Auth() {
                            disabled:opacity-50 disabled:cursor-not-allowed
                            ${overlayContentClasses}`}
               >
-                {!isLoginActive ? "Sign Up" : "Login"}
+                {isLoginActive ? "Sign Up" : "Login"}
               </button>
             </div>
           </div>
