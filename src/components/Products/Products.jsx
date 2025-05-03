@@ -9,7 +9,7 @@ function ProductCard({ product, isLoggedIn }) {
         alt={product.title}
         className="w-full h-48 object-cover rounded-t-lg mb-3"
       />
-      <div> {/* Wrapper for text content */}
+      <div>
         <h3 className="text-lg font-semibold mb-1 truncate" title={product.title}>
           {product.title}
         </h3>
@@ -26,21 +26,21 @@ function ProductCard({ product, isLoggedIn }) {
           </span>
         </div>
       </div>
-      <div className="flex justify-between space-x-2 mt-auto pt-2 border-t border-gray-100"> {/* Buttons aligned to the right, added top border */}
+      <div className="flex justify-between space-x-2 mt-auto pt-2 border-t border-gray-100">
         <button
           title={isLoggedIn ? "Add to Favorites" : "Login to add to Favorites"}
           disabled={!isLoggedIn}
           className={`p-1.5 rounded-full text-lg transition-colors duration-200
                      ${isLoggedIn ? 'text-red-500 hover:bg-red-100' : 'text-gray-400 cursor-not-allowed'}`}
         >
-          <i className="fa-solid fa-heart"></i> {/* Assuming Font Awesome solid style */}
+          <i className="fa-solid fa-heart"></i>
         </button>
         <button
           title={isLoggedIn ? "Add to Cart" : "Login to add to Cart"}
           disabled={!isLoggedIn}
           className={`p-1.5 rounded-full text-lg transition-colors duration-200
                      ${isLoggedIn ? 'text-blue-600 hover:bg-blue-100' : 'text-gray-400 cursor-not-allowed'}`}
-        >
+          >
           <i className="fa-solid fa-cart-plus"></i> {/* Assuming Font Awesome solid style */}
         </button>
       </div>
@@ -52,10 +52,7 @@ function Products() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  // --- Placeholder for Authentication State ---
-  // In a real app, get this from Context, Redux, or your auth hook
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Simulate logged-out state initially
-  // --- Simulate login after a delay (for demonstration) ---
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
     setTimeout(() => setIsLoggedIn(true), 5000); // Simulate login after 5 seconds
   }, []);
@@ -100,7 +97,7 @@ function Products() {
             <ProductCard
               key={product.id}
               product={product}
-              isLoggedIn={isLoggedIn} // Pass login status down
+              isLoggedIn={isLoggedIn}
             />
           ))}
         </div>
