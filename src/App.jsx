@@ -20,7 +20,7 @@ function App() {
       },
       { path: "auth", element: <Auth /> },
     ],
-    { basename: "/e-commerce-react/" }
+    
   );
 
   return (
