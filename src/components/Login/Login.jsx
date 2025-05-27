@@ -27,9 +27,7 @@ const InputField = ({ label, id, error, touched, type = "text", placeholder, ...
       placeholder={placeholder || `Enter your ${label.toLowerCase().replace(":", "")}...`}
       {...props}
     />
-    {touched && error && (
-      <p className="mt-1 text-xs text-red-600">{error}</p>
-    )}
+    {touched && error && <p className="mt-1 text-xs text-red-600">{error}</p>}
   </div>
 );
 
@@ -61,6 +59,7 @@ function Login() {
         console.log("Login successful:", response.data);
         if (response.data.message === "success" && response.data.token) {
           localStorage.setItem("UserToken", response.data.token);
+          localStorage.setItem("UserName", response.data.user.name); // Save user name
           navigate("/");
         } else {
           setApiError(response.data.message || "Login succeeded but no token received.");
