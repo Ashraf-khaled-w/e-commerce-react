@@ -1,12 +1,24 @@
-# React + Vite
+# 🛍️ E-Commerce Store with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **responsive e-commerce store** built with **React**, **Tailwind CSS**, and **localStorage**. The app allows users to browse products, add them to a cart, and manage cart state — all on the frontend.
 
-Currently, two official plugins are available:
+## 📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![e-c-1](https://github.com/user-attachments/assets/45fa8cdd-b4ba-4c43-9cb2-9025c66de1a0)
+![e-c-login](https://github.com/user-attachments/assets/94697ab6-db03-4521-8d43-5fff327d271e)
+![e-c-signup](https://github.com/user-attachments/assets/5ac3a3c6-a61c-4d0f-856a-7aae180fe210)
+![e-c-fav](https://github.com/user-attachments/assets/32e4949a-e00c-4c3b-aa0a-eb66d62668fe)
+![e-c-cart](https://github.com/user-attachments/assets/fca48849-9944-4dd5-b7d9-537e6f7a9560)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- ⚛️ Built with **React Functional Components**
+- 🛒 Add to cart / Remove from cart
+- 💾 Cart data saved with `localStorage`
+- 🖥️ Responsive UI with **Tailwind CSS**
+- ♻️ Dynamic rendering of product data
+- 🧩 Component-based structure for easy scalability
+
+## 📁 Project Structure
+
